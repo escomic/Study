@@ -7,14 +7,14 @@ package algorithm.sort;
  */
 public class QuickSort {
 
-	public int[] sort(int[] data) {
+	public static int[] sort(int[] data) {
 		int left = 0;
 		int right = data.length - 1;
 		data = quickSort(data, left, right);
 		return data;
 	}
 
-	public int[] quickSort(int data[], int left, int right) {
+	public static int[] quickSort(int data[], int left, int right) {
 		int index = partition(data, left, right);
 		if (left < index - 1) {
 			quickSort(data, left, index - 1);
@@ -25,7 +25,7 @@ public class QuickSort {
 		return data;
 	}
 
-	public int partition(int data[], int left, int right) {
+	public static int partition(int data[], int left, int right) {
 		int pivot = data[(left + right) / 2];
 
 		while (left <= right) {
@@ -50,8 +50,7 @@ public class QuickSort {
 	public static void main(String[] args) {
 		int[] data = { 10, 34, 3, 456, 23, 31 };
 		Utils.print("before", data);
-		QuickSort sort = new QuickSort();
-		sort.sort(data);
+		sort(data);
 		Utils.print("after", data);
 	}
 

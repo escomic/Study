@@ -7,7 +7,7 @@ package algorithm.sort;
  */
 public class BubbleSort {
 
-	public int[] sort(int[] data) {
+	public static int[] sort(int[] data) {
 		int size = data.length;
 		int temp;
 		for (int i = 0; i < size - 1; i++) {
@@ -25,8 +25,7 @@ public class BubbleSort {
 	public static void main(String[] args) {
 		int[] data = { 10, 34, 3, 456, 23, 31 };
 		Utils.print("before", data);
-		BubbleSort sort = new BubbleSort();
-		sort.sort(data);
+		sort(data);
 		Utils.print("after", data);
 	}
 	

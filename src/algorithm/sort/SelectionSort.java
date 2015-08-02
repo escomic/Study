@@ -7,7 +7,7 @@ package algorithm.sort;
  */
 public class SelectionSort {
 
-	public int[] sort(int[] data) {
+	public static int[] sort(int[] data) {
 		int size = data.length;
 		int minValue;
 		int minIndex;
@@ -33,8 +33,7 @@ public class SelectionSort {
 	public static void main(String[] args) {
 		int[] data = { 10, 34, 3, 456, 23, 31 };
 		Utils.print("before", data);
-		SelectionSort sort = new SelectionSort();
-		sort.sort(data);
+		sort(data);
 		Utils.print("after", data);
 	}
 }
